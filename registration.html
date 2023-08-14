@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Booth Registration</title>
+  </head>
+  <body>
+    <nav class="top-nav-bar">
+      <div class="web-name-container">
+        <a href="index.html">
+          <img class="logo" src="assets/images/ExpoFest.svg" alt=""">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="registration.html">Register</a></li>
+      </ul>
+    </nav>
+    <h1>Create and Connect!</h1>
+    <form action="" method="POST">
+      <label for="companyName">Company Name:</label>
+      <input
+        type="text"
+        id="companyName"
+        name="companyName"
+        required
+        placeholder="Enter Company Name (required)"
+      />
+      <div style="display: flex">
+        <div>
+          <label for="boothSize">Booth Size:</label>
+          <select id="boothSize" name="boothSize" required>
+            <option selected disabled hidden>Please Select Booth Size</option>
+            <option value="10x10">10x10 feet</option>
+            <option value="10x15">10x15 feet</option>
+          </select>
+        </div>
+        <div style="padding-left: 40px">
+          <label for="tableCheckbox">Include Table:</label>
+          <input type="checkbox" id="tableCheckbox" name="tableCheckbox" />
+        </div>
+      </div>
+
+      <label for="numChairs">Number of Chairs:</label>
+      <input
+        type="number"
+        id="numChairs"
+        name="numChairs"
+        min="1"
+        placeholder="-"
+        max="10"
+      />
+
+      <label for="contactName">Contact Name:</label>
+      <input
+        type="text"
+        id="contactName"
+        name="contactName"
+        required
+        placeholder="Enter Contact Name (required)"
+      />
+
+      <label for="contactNumber">Contact Number:</label>
+      <input
+        type="tel"
+        id="contactNumber"
+        name="contactNumber"
+        required
+        placeholder="Enter Contact Number (required)"
+      />
+
+      <input class="submit-button" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
