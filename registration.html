@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Booth Registration</title>
+    <script src="register.js"></script>
   </head>
   <body>
     <nav class="top-nav-bar">
@@ -20,20 +21,21 @@
       </ul>
     </nav>
     <h1>Create and Connect!</h1>
-    <form action="" method="POST">
+    <form id="registration-form">
       <label for="companyName">Company Name:</label>
       <input
         type="text"
         id="companyName"
         name="companyName"
-        required
         placeholder="Enter Company Name (required)"
       />
       <div style="display: flex">
         <div>
           <label for="boothSize">Booth Size:</label>
           <select id="boothSize" name="boothSize" required>
-            <option selected disabled hidden>Please Select Booth Size</option>
+            <option selected disabled value hidden>
+              Please Select Booth Size
+            </option>
             <option value="10x10">10x10 feet</option>
             <option value="10x15">10x15 feet</option>
           </select>
@@ -45,21 +47,13 @@
       </div>
 
       <label for="numChairs">Number of Chairs:</label>
-      <input
-        type="number"
-        id="numChairs"
-        name="numChairs"
-        min="1"
-        placeholder="-"
-        max="10"
-      />
+      <input type="number" id="numChairs" name="numChairs" placeholder="-" />
 
       <label for="contactName">Contact Name:</label>
       <input
         type="text"
         id="contactName"
         name="contactName"
-        required
         placeholder="Enter Contact Name (required)"
       />
 
@@ -68,10 +62,8 @@
         type="tel"
         id="contactNumber"
         name="contactNumber"
-        required
         placeholder="Enter Contact Number (required)"
       />
-
       <input class="submit-button" type="submit" value="Submit" />
     </form>
   </body>
